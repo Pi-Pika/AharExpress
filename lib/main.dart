@@ -11,7 +11,7 @@ void main() {
       ),
   );
 }
-//this is from laptop
+//this is from pc 2
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
