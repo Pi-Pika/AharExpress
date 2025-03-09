@@ -5,13 +5,14 @@ import 'package:provider/provider.dart';
 
 void main() {
   runApp(
-      ChangeNotifierProvider(
-        create: (context) => ThemeProvider(),
-        child: const MyApp(),
-      ),
+    ChangeNotifierProvider(
+      create: (context) => ThemeProvider(),
+      child: const MyApp(),
+    ),
   );
 }
-//this is from pc 2
+
+//this vs code
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 

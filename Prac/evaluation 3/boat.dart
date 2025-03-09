@@ -1,6 +1,7 @@
 import 'vehicle.dart';
+
 class Boat extends Vehicle {
-  Boat(int speed) : super(speed);
+  Boat(super.speed);
 
   @override
   void move() {

@@ -7,7 +7,6 @@ class LoginPage extends StatefulWidget {
 
   const LoginPage({super.key, required this.onTap});
 
-
   @override
   State<LoginPage> createState() => _LoginPageState();
 }
@@ -21,14 +20,14 @@ class _LoginPageState extends State<LoginPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Theme.of(context).colorScheme.background,
+      backgroundColor: Theme.of(context).colorScheme.surface,
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             // logo
             Icon(
-              Icons.food_bank ,
+              Icons.food_bank,
               size: 100,
               color: Theme.of(context).colorScheme.inversePrimary,
             ),
@@ -38,19 +37,18 @@ class _LoginPageState extends State<LoginPage> {
             Text(
               "Ahar Express",
               style: TextStyle(
-                  color: Theme.of(context).colorScheme.inversePrimary,
-                  fontSize: 16,
+                color: Theme.of(context).colorScheme.inversePrimary,
+                fontSize: 16,
               ),
             ),
 
             const SizedBox(height: 25),
 
-           //email field
+            //email field
             MyTextField(
                 controller: emailController,
                 hinText: "Email",
-                obscureText: false
-            ),
+                obscureText: false),
 
             const SizedBox(height: 10),
 
@@ -58,8 +56,7 @@ class _LoginPageState extends State<LoginPage> {
             MyTextField(
                 controller: passwordController,
                 hinText: "Password",
-                obscureText: true
-            ),
+                obscureText: true),
 
             const SizedBox(height: 10),
 
@@ -78,7 +75,8 @@ class _LoginPageState extends State<LoginPage> {
                 Text(
                   "Not a member?",
                   style: TextStyle(
-                    color: Theme.of(context).colorScheme.inversePrimary,),
+                    color: Theme.of(context).colorScheme.inversePrimary,
+                  ),
                 ),
                 const SizedBox(width: 4),
                 GestureDetector(

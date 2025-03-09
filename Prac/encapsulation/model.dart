@@ -1,12 +1,10 @@
-class Model
-{
+class Model {
   String name = "ehat";
-  String get getName
-  {
+  String get getName {
     return name;
   }
-  void set setName(String a)
-  {
+
+  set setName(String a) {
     name = a;
   }
 }
