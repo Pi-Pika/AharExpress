@@ -1,3 +1,5 @@
+import 'package:first_app/auth/login_or_register.dart';
+import 'package:first_app/pages/register_page.dart';
 import 'package:flutter/material.dart';
 import 'package:first_app/pages/login_page.dart';
 import 'package:first_app/theme/theme_provider.dart';
@@ -12,7 +14,6 @@ void main() {
   );
 }
 
-//this vs codebhndng
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
@@ -20,9 +21,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: LoginPage(
-        onTap: () {},
-      ),
+      home: LoginOrRegister(),
       theme: Provider.of<ThemeProvider>(context).themeData,
     );
   }
