@@ -1,5 +1,6 @@
 import 'package:first_app/components/my_current_location.dart';
 import 'package:first_app/components/my_description_box.dart';
+import 'package:first_app/components/my_food_tile.dart';
 import 'package:first_app/components/my_tab_bar.dart';
 import 'package:first_app/model/food.dart';
 import 'package:first_app/model/restaurant.dart';
@@ -42,15 +43,21 @@ class _HomePageState extends State<HomePage> with SingleTickerProviderStateMixin
   // return list of foods in given category
   List<Widget> getFoodInThisCategory(List<Food> fullMenu) {
     return FoodCategory.values.map((category) {
+      //get category menu
       List<Food> categoryMenu = _filterMenuCategory(category, fullMenu);
 
       return ListView.builder(
         itemCount: categoryMenu.length,
         physics: const NeverScrollableScrollPhysics(),
         padding: EdgeInsets.zero,
-        itemBuilder: (context, index){
-          return ListTile(
-            title: Text(categoryMenu[index].name),
+        itemBuilder: (context, index) {
+          //get individual food
+          final food = categoryMenu[index];
+
+          //return foodtile UI
+          return FoodTile(
+              food: food,
+              onTap: () {},
           );
         },
       );
