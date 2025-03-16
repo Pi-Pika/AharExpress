@@ -19,6 +19,56 @@ class Restaurant extends ChangeNotifier{
         Addon(name: "Avocado", price: 2.99),
       ],
     ),
+    Food(
+      name: "Aloha Burger",
+      description: "Plump and juicy beef patties, grilled pineapples and a special creamy burger sauce, these Aloha Burgers are extra special and delicious!",
+      imagePath: "lib/images/burgers/aloha_burger.jpg",
+      price: 1.52,
+      category: FoodCategory.Burgers,
+      availableAddons: [
+        Addon(name: "Extra Cheese", price: 0.99),
+        Addon(name: "Oninon", price: 1.99),
+        Addon(name: "Avocado", price: 2.99),
+      ],
+    ),
+    Food(
+      name: "BBQ Burger",
+      description: "These BBQ Burgers are an amazingly juicy explosion of sweet, tangy, spicy, smokey, crispy deliciousness all at the same time.",
+      imagePath: "lib/images/burgers/bbq_burger.jpg",
+      price: 2.52,
+      category: FoodCategory.Burgers,
+      availableAddons: [
+        Addon(name: "Extra Cheese", price: 0.99),
+        Addon(name: "Oninon", price: 1.99),
+        Addon(name: "Avocado", price: 2.99),
+      ],
+    ),
+    Food(
+      name: "Bluemoon Burger",
+      description: "Blue Moon Burgers uses premium PNW sourced beef to deliver the best tasting burger around.",
+      imagePath: "lib/images/burgers/bluemoon_burger.jpeg",
+      price: 3.52,
+      category: FoodCategory.Burgers,
+      availableAddons: [
+        Addon(name: "Extra Cheese", price: 0.99),
+        Addon(name: "Oninon", price: 1.99),
+        Addon(name: "Avocado", price: 2.99),
+      ],
+    ),
+    Food(
+      name: "Veggie Burger",
+      description: "A veggie burger or meatless burger is a hamburger made with a patty that does not contain meat, or the patty of such a hamburger. ",
+      imagePath: "lib/images/burgers/vege_burger.jpg",
+      price: 0.99,
+      category: FoodCategory.Burgers,
+      availableAddons: [
+        Addon(name: "Extra Cheese", price: 0.99),
+        Addon(name: "Oninon", price: 1.99),
+        Addon(name: "Avocado", price: 2.99),
+      ],
+    ),
+
+
     //salad
     Food(
       name: "Quinoa Salad",
