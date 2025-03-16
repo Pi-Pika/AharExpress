@@ -19,6 +19,19 @@ class Restaurant extends ChangeNotifier{
         Addon(name: "Avocado", price: 2.99),
       ],
     ),
+    //salad
+    Food(
+      name: "Quinoa Salad",
+      description: "This quinoa salad recipe is the best! Everyone loves this healthy quinoa salad made with quinoa, chickpeas, red bell pepper, cucumber, parsley and lemon.",
+      imagePath: "lib/images/salads/quinoa_salad.jpeg",
+      price: 1.99,
+      category: FoodCategory.salads,
+      availableAddons: [
+        Addon(name: "Yougart", price: 0.99),
+        Addon(name: "Mayonease", price: 1.99),
+        Addon(name: "Avocado", price: 2.99),
+      ],
+    ),
   ];
   /*
   G E T T E R S
