@@ -1,5 +1,4 @@
 import 'package:flutter/cupertino.dart';
-
 import 'food.dart';
 
 class Restaurant extends ChangeNotifier{
@@ -137,25 +136,25 @@ class Restaurant extends ChangeNotifier{
 
   List<Food> get menu => _menu;
 
-  /*
+/*
   O P R E R A T I O N S
   */
 
-  // add to cart
+// add to cart
 
-  // remove from cart
+// remove from cart
 
-  //get total number of items from cart
+//get total number of items from cart
 
-  //clear cart
+//clear cart
 
-  /*
+/*
   H E L P E R S
   */
 
-  // generate a receipt
+// generate a receipt
 
-  // format double value into money
+// format double value into money
 
-  //format list of addons into a string summary
+//format list of addons into a string summary
 }

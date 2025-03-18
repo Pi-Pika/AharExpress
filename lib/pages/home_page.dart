@@ -4,6 +4,7 @@ import 'package:first_app/components/my_food_tile.dart';
 import 'package:first_app/components/my_tab_bar.dart';
 import 'package:first_app/model/food.dart';
 import 'package:first_app/model/restaurant.dart';
+import 'package:first_app/pages/food_page.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -57,7 +58,12 @@ class _HomePageState extends State<HomePage> with SingleTickerProviderStateMixin
           //return foodtile UI
           return FoodTile(
               food: food,
-              onTap: () {},
+              onTap: () => Navigator.push(
+                context,
+                MaterialPageRoute(
+                    builder: (context) => FoodPage(food: food),
+                ),
+              ),
           );
         },
       );
