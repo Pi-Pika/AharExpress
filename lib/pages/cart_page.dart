@@ -1,8 +1,10 @@
 import 'package:first_app/model/cart_item.dart';
+import 'package:first_app/pages/payment_page.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:first_app/model/restaurant.dart';
 
+import '../components/my_button.dart';
 import '../components/my_cart_tile.dart';
 
 class CartPage extends StatelessWidget {
@@ -14,7 +16,7 @@ class CartPage extends StatelessWidget {
       //cart
       final userCart = restaurant.cart;
 
-      //scaffodl UI
+      //scaffold UI
       return Scaffold(
         appBar: AppBar(
           title: const Text("Cart"),
@@ -53,21 +55,41 @@ class CartPage extends StatelessWidget {
         ),
         body: Column(
           children: [
-            Expanded(
-              child: ListView.builder(
-                  itemCount: userCart.length,
-                  itemBuilder: (context, index) {
-                    // get individual cart item
-                    final cartItem = userCart[index];
 
-                    //return cart tile item
-                    return MyCartTile(
-                      cartItem: cartItem,
-                    );
-                  }),
+            //list of cart
+            Expanded(
+              child: Column(
+                children: [
+                  userCart.isEmpty
+                      ? Expanded(
+                          child: Center(child: const Text("Cart is empty...")),
+                        )
+                      : Expanded(
+                          child: ListView.builder(
+                              itemCount: userCart.length,
+                              itemBuilder: (context, index) {
+                                // get individual cart item
+                                final cartItem = userCart[index];
+              
+                                //return cart tile item
+                                return MyCartTile(
+                                  cartItem: cartItem,
+                                );
+                              }),
+                        ),
+                ],
+              ),
             ),
+            //button to pay
+            MyButton(onTap: () => Navigator.push(context, MaterialPageRoute(builder: (context) => const PaymentPage()),
+            ),
+                text: "Go to checkout"),
+
+            const SizedBox(height: 25),
           ],
         ),
+
+
       );
     });
   }
