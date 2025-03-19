@@ -1,4 +1,5 @@
 import 'package:first_app/auth/login_or_register.dart';
+import 'package:first_app/model/restaurant.dart';
 import 'package:first_app/pages/register_page.dart';
 import 'package:flutter/material.dart';
 import 'package:first_app/pages/login_page.dart';
@@ -7,8 +8,14 @@ import 'package:provider/provider.dart';
 
 void main() {
   runApp(
-    ChangeNotifierProvider(
-      create: (context) => ThemeProvider(),
+    MultiProvider(
+      providers: [
+        //theme provider
+        ChangeNotifierProvider(create: (context) => ThemeProvider()),
+
+        //restaurent provider
+        ChangeNotifierProvider(create: (context) => Restaurant()),
+      ],
       child: const MyApp(),
     ),
   );
