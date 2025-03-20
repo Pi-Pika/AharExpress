@@ -1,2 +1,3 @@
 flutter pub add collection
 flutter pub add flutter_credit_card
+flutter pub add intl
