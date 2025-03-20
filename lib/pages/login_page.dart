@@ -40,6 +40,7 @@ class _LoginPageState extends State<LoginPage> {
           children: [
             // logo
             Icon(
+              // ekhane image dewa lagbe
               Icons.food_bank,
               size: 100,
               color: Theme.of(context).colorScheme.inversePrimary,

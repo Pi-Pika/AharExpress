@@ -45,7 +45,7 @@ class _RegisterPageState extends State<RegisterPage> {
 
             const SizedBox(height: 25),
 
-            //email field
+            //email er jayga
             MyTextField(
                 controller: emailController,
                 hinText: "Email",
@@ -53,7 +53,7 @@ class _RegisterPageState extends State<RegisterPage> {
 
             const SizedBox(height: 10),
 
-            //password field
+            //password er jayga
             MyTextField(
                 controller: passwordController,
                 hinText: "Password",
@@ -61,7 +61,7 @@ class _RegisterPageState extends State<RegisterPage> {
 
             const SizedBox(height: 10),
 
-            //password field
+            //confirm password jayga
             MyTextField(
                 controller: confirmPasswordController,
                 hinText: "Confirm Password",
@@ -69,7 +69,7 @@ class _RegisterPageState extends State<RegisterPage> {
 
             const SizedBox(height: 10),
 
-            //sign in button
+            //sign in  er button
             MyButton(
               text: "Sign Up",
               onTap: () {},

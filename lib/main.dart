@@ -10,10 +10,10 @@ void main() {
   runApp(
     MultiProvider(
       providers: [
-        //theme provider
+        //theme  er provider
         ChangeNotifierProvider(create: (context) => ThemeProvider()),
 
-        //restaurent provider
+        //restaurent  er provider
         ChangeNotifierProvider(create: (context) => Restaurant()),
       ],
       child: const MyApp(),

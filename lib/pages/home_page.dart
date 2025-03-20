@@ -35,13 +35,13 @@ class _HomePageState extends State<HomePage> with SingleTickerProviderStateMixin
     super.dispose();
   }
 
-  //sort out and return a list of food items that belong to a specific category
+  //item sort kore menu te dekhabe
   List<Food> _filterMenuCategory(FoodCategory category, List<Food> fullMenu) {
     return fullMenu.where((food) => food.category == category).toList();
   }
 
 
-  // return list of foods in given category
+  // category wise food dekhabe
   List<Widget> getFoodInThisCategory(List<Food> fullMenu) {
     return FoodCategory.values.map((category) {
       //get category menu
@@ -55,7 +55,7 @@ class _HomePageState extends State<HomePage> with SingleTickerProviderStateMixin
           //get individual food
           final food = categoryMenu[index];
 
-          //return foodtile UI
+          //foodpage e jabe
           return FoodTile(
               food: food,
               onTap: () => Navigator.push(
@@ -86,10 +86,10 @@ class _HomePageState extends State<HomePage> with SingleTickerProviderStateMixin
                   color: Theme.of(context).colorScheme.secondary,
                 ),
 
-                // my current location
+                // current location
                 MyCurrentLocation(),
 
-                //descriptionbox
+                //description box
                 MyDescriptionBox(),
               ],
             ),

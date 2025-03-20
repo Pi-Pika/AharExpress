@@ -36,7 +36,7 @@ class SettingsPage extends StatelessWidget {
                   ),
                 ),
 
-                //switch
+                //toggle switch light/dark
                 CupertinoSwitch(
                     value: Provider.of<ThemeProvider>(context, listen: false)
                         .isDarkMode,

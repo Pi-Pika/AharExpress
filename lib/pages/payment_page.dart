@@ -18,10 +18,10 @@ class _PaymentPageState extends State<PaymentPage> {
   String cvvCode = '';
   bool isCvvFocused = false;
 
-  //user wants to pay
+  //user pay korar jayga
   void userTappedPay() {
     if (formKey.currentState!.validate()) {
-      //only show dialog if form is valid
+      //form valid hoile kaj korbe
       showDialog(
         context: context,
         builder: (context) => AlertDialog(
@@ -60,7 +60,6 @@ class _PaymentPageState extends State<PaymentPage> {
         ),
       );
     }
-
   }
 
   @override
@@ -75,7 +74,7 @@ class _PaymentPageState extends State<PaymentPage> {
       body: SingleChildScrollView(
         child: Column(
           children: [
-            //credit card
+            //credit card er widget
             CreditCardWidget(
         
               cardNumber: cardNumber,
@@ -86,7 +85,7 @@ class _PaymentPageState extends State<PaymentPage> {
               onCreditCardWidgetChange: (p0) {},
             ),
         
-            //credit card form
+            //credit card  er form
             CreditCardForm(
                 cardNumber: cardNumber,
                 expiryDate: expiryDate,

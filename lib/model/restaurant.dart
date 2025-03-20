@@ -163,24 +163,24 @@ class Restaurant extends ChangeNotifier {
 
   // add to cart
   void addToCart(Food food, List<Addon> selectedAddons) {
-    // see if there is a cart item already with the same food and selected addons
+    // cart item same naki
     CartItem? cartItem = _cart.firstWhereOrNull((item) {
-      // check if the food items are the same
+      //food item same naki
       bool isSameFood = item.food == food;
 
-      // check if the list of selected addons are the same
+      // addon same naki
       bool isSameAddons =
           ListEquality().equals(item.selectedAddons, selectedAddons);
 
       return isSameFood && isSameAddons;
     });
 
-    // if item already exists, increase it's quantity
+    // item already thakle increase
     if (cartItem != null) {
       cartItem.quantity++;
     }
 
-    // otherwise, add a new cart item to the cart
+    // na thakle add hobe
     else {
       _cart.add(
         CartItem(
@@ -207,7 +207,7 @@ class Restaurant extends ChangeNotifier {
     notifyListeners();
   }
 
-  // get total price of the cart
+  // total price of the cart
   double getTotalPrice() {
     double total = 0.0;
     for (CartItem cartItem in _cart) {
@@ -223,7 +223,7 @@ class Restaurant extends ChangeNotifier {
     return total;
   }
 
-  //get total number of items from cart
+  //cart e total item
   int getTotalItamCount() {
     int totalItamCount = 0;
 
@@ -278,12 +278,12 @@ class Restaurant extends ChangeNotifier {
     return receipt.toString();
   }
 
-  // format double value into money
+  // money te convert
   String _formatPrice(double price) {
     return "Tk.${price.toStringAsFixed(2)}";
   }
 
-  //format list of addons into a string summary
+  //addon string e convert
   String _formatAddons(List<Addon> addons) {
       return addons
           .map((addon) => "${addon.name} (${_formatPrice(addon.price)})")

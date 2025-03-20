@@ -13,7 +13,7 @@ class FoodPage extends StatefulWidget {
     super.key,
     required this.food,
   }) {
-    // initialize selected addons to be false
+    // shuru te shob addon off thakbe
     for (Addon addon in food.availableAddons) {
       selectedAddons[addon] = false;
     }
@@ -24,11 +24,11 @@ class FoodPage extends StatefulWidget {
 }
 
 class _FoodPageState extends State<FoodPage> {
-  //method to add to cart
+  //cart e add hobe
   void addToCart(Food food, Map<Addon, bool> selectedAddons){
     Navigator.pop(context);
 
-    //format selected addons
+    //addon select hobe
     List<Addon> currentlySelectedAddons = [];
     for (Addon addon in widget.food.availableAddons) {
       if (widget.selectedAddons[addon] == true) {
@@ -36,7 +36,7 @@ class _FoodPageState extends State<FoodPage> {
       }
     }
 
-    // add to cart
+    // cart add
     context.read<Restaurant>().addToCart(food, currentlySelectedAddons);
   }
 

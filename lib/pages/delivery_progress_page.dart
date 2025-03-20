@@ -20,7 +20,7 @@ class DeliveryProgressPage extends StatelessWidget {
     );
   }
 
-  // Custom bottom Nav Bar
+  // Custom bottom Navigation Bar
   Widget _buildBottomNavBar(BuildContext context) {
     return Container(
       height: 100,
@@ -31,14 +31,73 @@ class DeliveryProgressPage extends StatelessWidget {
           topRight: Radius.circular(40),
         ),
       ),
+
+      padding: const EdgeInsets.all(25),
       child: Row(
         children: [
           // driver er profile pic
           Container(
             decoration: BoxDecoration(
-              color:
+              color: Theme.of(context).colorScheme.background,
+              shape: BoxShape.circle,
             ),
-          )
+            child: IconButton(
+              onPressed: () {},
+              icon: Icon(Icons.person),
+            ),
+          ),
+
+          const SizedBox(width: 18),
+
+          // driver  er Details
+          Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text(
+                "Faharia Akter",
+                style: TextStyle(
+                  fontSize: 18,
+                  fontWeight: FontWeight.bold,
+                  color: Theme.of(context).colorScheme.inversePrimary,
+                ),
+              ),
+            ],
+          ),
+
+          const Spacer(),
+
+          // message details
+          Row(
+            children: [
+              //driver k message  dewar button
+              Container(
+                decoration: BoxDecoration(
+                  color: Theme.of(context).colorScheme.background,
+                  shape: BoxShape.circle,
+                ),
+                child: IconButton(
+                  onPressed: () {},
+                  icon: Icon(Icons.message),
+                    color: Theme.of(context).colorScheme.primary,
+                ),
+              ),
+
+              const SizedBox(width: 10),
+
+              //driver k call dewar button
+              Container(
+                decoration: BoxDecoration(
+                  color: Theme.of(context).colorScheme.background,
+                  shape: BoxShape.circle,
+                ),
+                child: IconButton(
+                  onPressed: () {},
+                  icon: Icon(Icons.call),
+                  color: Colors.green,
+                ),
+              ),
+            ],
+          ),
         ],
       ),
     );
