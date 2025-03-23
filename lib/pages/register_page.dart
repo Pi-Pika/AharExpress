@@ -18,6 +18,11 @@ class _RegisterPageState extends State<RegisterPage> {
   final TextEditingController passwordController = TextEditingController();
   final TextEditingController confirmPasswordController = TextEditingController();
 
+  // register method
+  void register() async {
+    // get auth service
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
