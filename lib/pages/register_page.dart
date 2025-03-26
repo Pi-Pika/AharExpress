@@ -70,7 +70,7 @@ class _RegisterPageState extends State<RegisterPage> {
               Icons.food_bank,
               size: 100,
               color: Theme.of(context).colorScheme.inversePrimary,
-            ),
+             ),
 
             const SizedBox(height: 15),
 

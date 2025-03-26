@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "512763439180",
+    "project_id": "aharexpress",
+    "storage_bucket": "aharexpress.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:512763439180:android:5e57753d009e5fc4782ce9",
+        "android_client_info": {
+          "package_name": "com.example.first_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyADrSnrtssEgj8OwSTUlAn81CWSr-51imw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

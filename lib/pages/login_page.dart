@@ -1,7 +1,7 @@
 import 'package:first_app/components/my_button.dart';
 import 'package:first_app/components/my_textfield.dart';
+import 'package:first_app/services/auth/auth_service.dart';
 import 'package:flutter/material.dart';
-import 'package:first_app/pages/home_page.dart';
 
 class LoginPage extends StatefulWidget {
   final void Function()? onTap;
@@ -18,98 +18,120 @@ class _LoginPageState extends State<LoginPage> {
   final TextEditingController passwordController = TextEditingController();
 
   //login method
-  void login() {
-    /*
-    fill out authentication
-     */
-    // navigate to home
-    Navigator.push(
-      context,
-      MaterialPageRoute(
-        builder: (context) => const HomePage(),
-      ),
-    );
+  void login() async{
+    // auth service er instance
+    final _authService = AuthService();
+
+    //sign in try
+    try {
+      await _authService.signInWithEmailPassword(
+        emailController.text, 
+        passwordController.text,
+      );
+    }
+
+    // error display
+    catch (e) {
+      showDialog(
+          context: context,
+          builder: (context) => AlertDialog(
+            title: Text(e.toString()),
+          ),
+      );
+    }
   }
 
   //forgot password
-
-
+  void forgotPw() {
+    showDialog(
+        context: context,
+        builder: (context) => AlertDialog(
+          backgroundColor: Theme.of(context).colorScheme.background,
+          title: const Text("User Tapped Forgot Password."),
+        ),
+    );
+  }
+  
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Theme.of(context).colorScheme.surface,
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            // logo
-            Icon(
-              // ekhane image dewa lagbe
-              Icons.food_bank,
-              size: 100,
-              color: Theme.of(context).colorScheme.inversePrimary,
-            ),
-
-            const SizedBox(height: 15),
-
-            Text(
-              "Ahar Express",
-              style: TextStyle(
-                color: Theme.of(context).colorScheme.inversePrimary,
-                fontSize: 16,
-              ),
-            ),
-
-            const SizedBox(height: 25),
-
-            //email field
-            MyTextField(
-                controller: emailController,
-                hinText: "Email",
-                obscureText: false),
-
-            const SizedBox(height: 10),
-
-            //password field
-            MyTextField(
-                controller: passwordController,
-                hinText: "Password",
-                obscureText: true),
-
-            const SizedBox(height: 10),
-
-            //sign in button
-            MyButton(
-              text: "Sign In",
-              onTap: login,
-            ),
-
-            const SizedBox(height: 25),
-
-            //not a member,register
-            Row(
+      body: SafeArea(
+        child: Center(
+          child: SingleChildScrollView(
+            child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
+                // logo
+                Icon(
+                  // ekhane image dewa lagbe
+                  Icons.food_bank,
+                  size: 100,
+                  color: Theme.of(context).colorScheme.inversePrimary,
+                ),
+                    
+                const SizedBox(height: 15),
+                    
                 Text(
-                  "Not a member?",
+                  "Ahar Express",
                   style: TextStyle(
                     color: Theme.of(context).colorScheme.inversePrimary,
+                    fontSize: 16,
                   ),
                 ),
-                const SizedBox(width: 4),
-                GestureDetector(
-                  onTap: widget.onTap,
-                  child: Text(
-                    "Register Now",
-                    style: TextStyle(
-                      color: Theme.of(context).colorScheme.inversePrimary,
-                      fontWeight: FontWeight.bold,
+                    
+                const SizedBox(height: 25),
+                    
+                //email field
+                MyTextField(
+                    controller: emailController,
+                    hinText: "Email",
+                    obscureText: false),
+                    
+                const SizedBox(height: 10),
+                    
+                //password field
+                MyTextField(
+                    controller: passwordController,
+                    hinText: "Password",
+                    obscureText: true),
+                    
+                const SizedBox(height: 10),
+                    
+                //sign in button
+                MyButton(
+                  text: "Sign In",
+                  onTap: login,
+                ),
+                    
+                const SizedBox(height: 25),
+                    
+                //not a member,register
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Text(
+                      "Not a member?",
+                      style: TextStyle(
+                        color: Theme.of(context).colorScheme.inversePrimary,
+                      ),
                     ),
-                  ),
+                    const SizedBox(width: 4),
+                    GestureDetector(
+                      onTap: widget.onTap,
+                      child: Text(
+                        "Register Now",
+                        style: TextStyle(
+                          color: Theme.of(context).colorScheme.inversePrimary,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                    ),
+                  ],
                 ),
               ],
             ),
-          ],
+          ),
         ),
       ),
     );
