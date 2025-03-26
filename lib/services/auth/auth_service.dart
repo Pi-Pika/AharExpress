@@ -16,7 +16,7 @@ class AuthService{
       UserCredential userCredential =
           await _firebaseAuth.signInWithEmailAndPassword(
             email: email,
-            password: password
+            password: password,
           );
 
       return userCredential;
@@ -29,12 +29,12 @@ class AuthService{
 
   //sign up
   Future<UserCredential> signUpWithEmailPassword(String email, password) async {
-    //sign user in
+    //try sign user up
     try {
       UserCredential userCredential =
       await _firebaseAuth.createUserWithEmailAndPassword(
           email: email,
-          password: password
+          password: password,
       );
 
       return userCredential;
