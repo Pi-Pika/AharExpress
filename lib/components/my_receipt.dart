@@ -16,16 +16,18 @@ class MyReceipt extends StatelessWidget {
           children: [
             const Text("Thank you For your Order!"),
             const SizedBox(height: 25),
-            Container(
-              decoration: BoxDecoration(
-                border: 
-                  Border.all(color: Theme.of(context).colorScheme.secondary),
-                borderRadius: BorderRadius.circular(8),
-              ),
-              padding: const EdgeInsets.all(25),
-              child: Consumer<Restaurant>(
-                  builder: (context, restaurant, child) =>
-                    Text(restaurant.displayCartReceipt()),
+            SingleChildScrollView(
+              child: Container(
+                decoration: BoxDecoration(
+                  border: 
+                    Border.all(color: Theme.of(context).colorScheme.secondary),
+                  borderRadius: BorderRadius.circular(8),
+                ),
+                padding: const EdgeInsets.all(25),
+                child: Consumer<Restaurant>(
+                    builder: (context, restaurant, child) =>
+                      Text(restaurant.displayCartReceipt()),
+                ),
               ),
             ),
             const SizedBox(height: 25),

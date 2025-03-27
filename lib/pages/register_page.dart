@@ -39,7 +39,7 @@ class _RegisterPageState extends State<RegisterPage> {
         showDialog(
           context: context,
           builder: (context) => AlertDialog(
-            title: Text(e.toString()),
+            title: Text("Box Faka Kisu lekhen"),
           ),
         );
       }
@@ -50,7 +50,7 @@ class _RegisterPageState extends State<RegisterPage> {
       showDialog(
         context: context,
         builder: (context) => const AlertDialog(
-          title: Text("Password Don't Match"),
+          title: Text("Dui Password Ek hoy nai"),
         ),
       );
     }
@@ -62,84 +62,86 @@ class _RegisterPageState extends State<RegisterPage> {
     return Scaffold(
       backgroundColor: Theme.of(context).colorScheme.surface,
       body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            // logo
-            Icon(
-              Icons.food_bank,
-              size: 100,
-              color: Theme.of(context).colorScheme.inversePrimary,
-            ),
-
-            const SizedBox(height: 15),
-
-            Text(
-              "let's crate an account for you",
-              style: TextStyle(
-                color: Theme.of(context).colorScheme.inversePrimary,
-                fontSize: 16,
+        child: SingleChildScrollView(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              // logo
+              SizedBox(
+                width: 250,
+                height: 250,
+                child: Image.asset("lib/images/logo/Screenshot 2025-03-27 131620.png"),
               ),
-            ),
-
-            const SizedBox(height: 25),
-
-            //email er jayga
-            MyTextField(
-                controller: emailController,
-                hinText: "Email",
-                obscureText: false),
-
-            const SizedBox(height: 10),
-
-            //password er jayga
-            MyTextField(
-                controller: passwordController,
-                hinText: "Password",
-                obscureText: true),
-
-            const SizedBox(height: 10),
-
-            //confirm password jayga
-            MyTextField(
-                controller: confirmPasswordController,
-                hinText: "Confirm Password",
-                obscureText: true),
-
-            const SizedBox(height: 10),
-
-            //sign in  er button
-            MyButton(
-              text: "Sign Up",
-              onTap: () {},
-            ),
-
-            const SizedBox(height: 25),
-
-            //Already have an account? Login here
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Text(
-                  "Already have an account?",
-                  style: TextStyle(
-                    color: Theme.of(context).colorScheme.inversePrimary,
-                  ),
+          
+              const SizedBox(height: 15),
+          
+              Text(
+                "let's create an account for you",
+                style: TextStyle(
+                  color: Theme.of(context).colorScheme.inversePrimary,
+                  fontSize: 16,
                 ),
-                const SizedBox(width: 4),
-                GestureDetector(
-                  onTap: widget.onTap,
-                  child: Text(
-                    "Login Now",
+              ),
+          
+              const SizedBox(height: 25),
+          
+              //email er jayga
+              MyTextField(
+                  controller: emailController,
+                  hinText: "Email",
+                  obscureText: false),
+          
+              const SizedBox(height: 10),
+          
+              //password er jayga
+              MyTextField(
+                  controller: passwordController,
+                  hinText: "Password",
+                  obscureText: true),
+          
+              const SizedBox(height: 10),
+          
+              //confirm password jayga
+              MyTextField(
+                  controller: confirmPasswordController,
+                  hinText: "Confirm Password",
+                  obscureText: true),
+          
+              const SizedBox(height: 10),
+          
+              //sign in  er button
+              MyButton(
+                text: "Sign Up",
+                onTap: register,
+              ),
+          
+              const SizedBox(height: 25),
+          
+              //Already have an account? Login here
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Text(
+                    "Already have an account?",
                     style: TextStyle(
                       color: Theme.of(context).colorScheme.inversePrimary,
-                      fontWeight: FontWeight.bold,
                     ),
                   ),
-                ),
-              ],
-            ),
-          ],
+                  const SizedBox(width: 4),
+                  GestureDetector(
+                    onTap: widget.onTap,
+                    child: Text(
+                      "Login Now",
+                      style: TextStyle(
+                        color: Theme.of(context).colorScheme.inversePrimary,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            ],
+          ),
         ),
       ),
     );

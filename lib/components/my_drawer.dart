@@ -1,10 +1,18 @@
 import 'package:first_app/components/my_drawer_tile.dart';
+import 'package:first_app/pages/weather_page.dart';
+import 'package:first_app/services/auth/auth_service.dart';
 import 'package:flutter/material.dart';
 
 import '../pages/settings_page.dart';
 
 class MyDrawer extends StatelessWidget {
   const MyDrawer({super.key});
+
+  void logout()
+  {
+    final authService = AuthService();
+    authService.signOut();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -14,15 +22,15 @@ class MyDrawer extends StatelessWidget {
         children: [
           //app logo
           Padding(
-            padding: const EdgeInsets.only(top: 100.0),
-            child: Icon(
-              Icons.lock_open_rounded,
-              size: 80,
-              color: Theme.of(context).colorScheme.inversePrimary,
+            padding: const EdgeInsets.only(top: 50.0),
+            child: SizedBox(
+              width: 200,
+              height: 200,
+              child: Image.asset("lib/images/logo/Screenshot 2025-03-27 131620.png"),
             ),
           ),
           Padding(
-            padding: const EdgeInsets.only(top: 100.0),
+            padding: const EdgeInsets.only(top: 50.0),
             child: Divider(
               color: Theme.of(context).colorScheme.inversePrimary,
             ),
@@ -47,13 +55,25 @@ class MyDrawer extends StatelessWidget {
             },
           ),
 
+          MyDrawerTile(
+            text: "W E A T H E R",
+            icon: Icons.sunny,
+            onTap: () {
+              Navigator.pop(context);
+              Navigator.push(context, MaterialPageRoute(
+                builder: (context) => const WeatherPage(),
+              ),
+              );
+            },
+          ),
+
           const Spacer(),
 
           //logout list tile
           MyDrawerTile(
             text: "L O G O U T",
             icon: Icons.logout,
-            onTap: () {},
+            onTap: logout,
           ),
 
           const SizedBox(height: 25),
