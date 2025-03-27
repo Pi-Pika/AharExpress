@@ -35,22 +35,12 @@ class _LoginPageState extends State<LoginPage> {
       showDialog(
           context: context,
           builder: (context) => AlertDialog(
-            title: Text(e.toString()),
+            title: Text("Vul Val Entry Disen"),
           ),
       );
     }
   }
 
-  //forgot password
-  void forgotPw() {
-    showDialog(
-        context: context,
-        builder: (context) => AlertDialog(
-          backgroundColor: Theme.of(context).colorScheme.background,
-          title: const Text("User Tapped Forgot Password."),
-        ),
-    );
-  }
   
   @override
   Widget build(BuildContext context) {
@@ -63,13 +53,12 @@ class _LoginPageState extends State<LoginPage> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 // logo
-                Icon(
-                  // ekhane image dewa lagbe
-                  Icons.food_bank,
-                  size: 100,
-                  color: Theme.of(context).colorScheme.inversePrimary,
+                SizedBox(
+                  width: 250,
+                  height: 250,
+                  child: Image.asset("lib/images/logo/Screenshot 2025-03-27 131620.png"),
                 ),
-                    
+
                 const SizedBox(height: 15),
                     
                 Text(

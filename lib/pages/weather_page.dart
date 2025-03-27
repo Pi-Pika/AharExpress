@@ -1,6 +1,7 @@
 import 'package:first_app/model/weather_model.dart';
 import 'package:first_app/services/weather/weather_services.dart';
 import 'package:flutter/material.dart';
+import 'package:lottie/lottie.dart';
 
 class WeatherPage extends StatefulWidget {
   const WeatherPage({super.key});
@@ -34,6 +35,27 @@ class _WeatherPageState extends State<WeatherPage> {
   }
 
   //weather animation
+  String getWeatherAnimation(String? mainCondition) {
+    if (mainCondition == null) return 'lib/images/animation/sunny.json';
+
+    switch (mainCondition.toLowerCase()) {
+      case 'clouds':
+      case 'mist':
+      case 'smoke':
+      case 'haze':
+      case 'dust':
+      case 'fog':
+        return 'lib/images/animation/cloudy.json';
+      case 'rain':
+      case 'shower rain':
+      case 'drizzle':
+        return 'lib/images/animation/rain.json';
+      case 'clear':
+        return 'lib/images/animation/sunny.json';
+      default:
+        return 'lib/images/animation/sunny.json';
+    }
+  }
 
 
   //
@@ -44,19 +66,29 @@ class _WeatherPageState extends State<WeatherPage> {
     //weather fetch on startup
     _fetchWeather();
   }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Theme.of(context).colorScheme.background,
       body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            //city name
-            Text(_weather?.cityName ?? "Loading city.."),
-
-            //temparature
-            Text('${_weather?.temparature.round()} Degree Celcius'),
-          ],
+        child: SingleChildScrollView(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              //city name
+              Text(_weather?.cityName ?? "Loading city.."),
+          
+              //animation
+              Lottie.asset(getWeatherAnimation(_weather?.mainCondition)),
+          
+              //temparature
+              Text('${_weather?.temparature.round()} Degree Celcius'),
+          
+              //weather condition
+              Text(_weather?.mainCondition ?? ""),
+            ],
+          ),
         ),
       ),
     );

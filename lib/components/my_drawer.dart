@@ -22,15 +22,15 @@ class MyDrawer extends StatelessWidget {
         children: [
           //app logo
           Padding(
-            padding: const EdgeInsets.only(top: 100.0),
-            child: Icon(
-              Icons.lock_open_rounded,
-              size: 80,
-              color: Theme.of(context).colorScheme.inversePrimary,
+            padding: const EdgeInsets.only(top: 50.0),
+            child: SizedBox(
+              width: 200,
+              height: 200,
+              child: Image.asset("lib/images/logo/Screenshot 2025-03-27 131620.png"),
             ),
           ),
           Padding(
-            padding: const EdgeInsets.only(top: 100.0),
+            padding: const EdgeInsets.only(top: 50.0),
             child: Divider(
               color: Theme.of(context).colorScheme.inversePrimary,
             ),

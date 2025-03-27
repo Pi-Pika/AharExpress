@@ -9,136 +9,119 @@ class Restaurant extends ChangeNotifier {
   final List<Food> _menu = [
     //burgers
     Food(
-      name: "Classic CheeseBurger",
+      name: "Jhinku Burger",
       description:
           "A Juicy beef patty with melted cheddar, lettuce, tomato, and  a hint of onion and pickle.",
       imagePath: "lib/images/burgers/cheese_burger.jpeg",
-      price: 0.99,
+      price: 150.99,
       category: FoodCategory.Burgers,
       availableAddons: [
-        Addon(name: "Extra Cheese", price: 0.99),
-        Addon(name: "Bacon", price: 1.99),
-        Addon(name: "Avocado", price: 2.99),
+        Addon(name: "Extra Cheese", price: 15.99),
+        Addon(name: "Bacon", price: 14.99),
+        Addon(name: "Avocado", price: 12.99),
       ],
     ),
     Food(
-      name: "Aloha Burger",
+      name: "Osthir Burger",
       description:
           "Plump and juicy beef patties, grilled pineapples and a special creamy burger sauce, these Aloha Burgers are extra special and delicious!",
       imagePath: "lib/images/burgers/aloha_burger.jpg",
-      price: 1.52,
+      price: 221.52,
       category: FoodCategory.Burgers,
       availableAddons: [
-        Addon(name: "Extra Cheese", price: 0.99),
-        Addon(name: "Oninon", price: 1.99),
-        Addon(name: "Avocado", price: 2.99),
+        Addon(name: "Extra Cheese", price: 16.99),
+        Addon(name: "Oninon", price: 13.99),
+        Addon(name: "Avocado", price: 12.99),
       ],
     ),
     Food(
-      name: "BBQ Burger",
+      name: "Jhakanaka Burger",
       description:
           "These BBQ Burgers are an amazingly juicy explosion of sweet, tangy, spicy, smokey, crispy deliciousness all at the same time.",
       imagePath: "lib/images/burgers/bbq_burger.jpg",
-      price: 2.52,
+      price: 209.52,
       category: FoodCategory.Burgers,
       availableAddons: [
-        Addon(name: "Extra Cheese", price: 0.99),
-        Addon(name: "Oninon", price: 1.99),
-        Addon(name: "Avocado", price: 2.99),
+        Addon(name: "Extra Cheese", price: 14.99),
+        Addon(name: "Oninon", price: 13.99),
+        Addon(name: "Avocado", price: 12.99),
       ],
     ),
     Food(
-      name: "Bluemoon Burger",
+      name: "Faltu Burger",
       description:
           "Blue Moon Burgers uses premium PNW sourced beef to deliver the best tasting burger around.",
       imagePath: "lib/images/burgers/bluemoon_burger.jpeg",
-      price: 3.52,
+      price: 253.52,
       category: FoodCategory.Burgers,
       availableAddons: [
-        Addon(name: "Extra Cheese", price: 0.99),
-        Addon(name: "Oninon", price: 1.99),
-        Addon(name: "Avocado", price: 2.99),
+        Addon(name: "Extra Cheese", price: 14.99),
+        Addon(name: "Oninon", price: 13.99),
+        Addon(name: "Avocado", price: 12.99),
       ],
     ),
     Food(
-      name: "Veggie Burger",
+      name: "Shei Burger",
       description:
           "A veggie burger or meatless burger is a hamburger made with a patty that does not contain meat, or the patty of such a hamburger. ",
       imagePath: "lib/images/burgers/vege_burger.jpg",
-      price: 0.99,
+      price: 120.99,
       category: FoodCategory.Burgers,
       availableAddons: [
-        Addon(name: "Extra Cheese", price: 0.99),
-        Addon(name: "Oninon", price: 1.99),
-        Addon(name: "Avocado", price: 2.99),
+        Addon(name: "Extra Cheese", price: 14.99),
+        Addon(name: "Oninon", price: 13.99),
+        Addon(name: "Avocado", price: 12.99),
       ],
     ),
 
     //salad
     Food(
-      name: "Quinoa Salad",
+      name: "Valo Salad",
       description:
           "This quinoa salad recipe is the best! Everyone loves this healthy quinoa salad made with quinoa, chickpeas, red bell pepper, cucumber, parsley and lemon.",
       imagePath: "lib/images/salads/quinoa_salad.jpeg",
-      price: 1.99,
+      price: 99.99,
       category: FoodCategory.Salads,
       availableAddons: [
-        Addon(name: "Yougart", price: 0.99),
-        Addon(name: "Mayonease", price: 1.99),
-        Addon(name: "Avocado", price: 2.99),
+        Addon(name: "Yougart", price: 15.99),
+        Addon(name: "Avocado", price: 13.99),
       ],
     ),
     Food(
-      name: "Asian Sesame Salad",
+      name: "Aro valo Salad",
       description:
           "This Asian Sesame Chicken Salad is a great way to secretly pack your family’s diet with a ton of vegetables. Hearty cabbage and greens are topped off with cooked chicken and crunchy almonds, then tossed in an Asian sesame ginger dressing.",
       imagePath: "lib/images/salads/asiansesame_salad.jpeg",
-      price: 1.50,
+      price: 120.50,
       category: FoodCategory.Salads,
-      availableAddons: [
-        Addon(name: " ", price: 0.00),
-        Addon(name: " ", price: 0.00),
-        Addon(name: " ", price: 0.00),
-      ],
+      availableAddons: [],
     ),
     Food(
-      name: "Caesar Salad",
+      name: "Onk Valo Salad",
       description:
           "This classic Caesar salad recipe features crisp romaine, crunchy croutons, and Parmesan cheese. A creamy, tangy homemade dressing ties it together.",
       imagePath: "lib/images/salads/ceasar_salad.jpeg",
-      price: 1.20,
+      price: 130.20,
       category: FoodCategory.Salads,
-      availableAddons: [
-        Addon(name: " ", price: 0.00),
-        Addon(name: " ", price: 0.00),
-        Addon(name: " ", price: 0.00),
-      ],
+      availableAddons: [],
     ),
     Food(
-      name: "Greek Salad",
+      name: "Shei Salad",
       description:
           "This easy Greek salad recipe is our new favorite summer side dish! Just 7 ingredients + a simple Greek salad dressing make it refreshing & delicious.",
       imagePath: "lib/images/salads/greek_salad.jpeg",
-      price: 1.20,
+      price: 140.20,
       category: FoodCategory.Salads,
-      availableAddons: [
-        Addon(name: " ", price: 0.00),
-        Addon(name: " ", price: 0.00),
-        Addon(name: " ", price: 0.00),
-      ],
+      availableAddons: [],
     ),
     Food(
-      name: "Southwesst Salad",
+      name: "Matha Nosto Salad",
       description:
           "This Southwest Salad recipe has quickly become one of my most popular and most pinned recipes of all time.  It’s fresh, filling, flavorful, gluten-free and will have you actually CRAVING salad!",
       imagePath: "lib/images/salads/southwest_salad.jpg",
-      price: 1.20,
+      price: 149.20,
       category: FoodCategory.Salads,
-      availableAddons: [
-        Addon(name: " ", price: 0.00),
-        Addon(name: " ", price: 0.00),
-        Addon(name: " ", price: 0.00),
-      ],
+      availableAddons: [],
     ),
 
     // sides

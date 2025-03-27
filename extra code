@@ -14,3 +14,4 @@ flutter pub add cloud_firestore
 flutter pub add http
 flutter pub add geolocator
 flutter pub add geocoding
+flutter pub add lottie
