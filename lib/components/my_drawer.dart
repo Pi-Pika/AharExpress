@@ -1,4 +1,5 @@
 import 'package:first_app/components/my_drawer_tile.dart';
+import 'package:first_app/pages/weather_page.dart';
 import 'package:first_app/services/auth/auth_service.dart';
 import 'package:flutter/material.dart';
 
@@ -50,6 +51,18 @@ class MyDrawer extends StatelessWidget {
               Navigator.push(context, MaterialPageRoute(
                   builder: (context) => const SettingsPage(),
                 ),
+              );
+            },
+          ),
+
+          MyDrawerTile(
+            text: "W E A T H E R",
+            icon: Icons.sunny,
+            onTap: () {
+              Navigator.pop(context);
+              Navigator.push(context, MaterialPageRoute(
+                builder: (context) => const WeatherPage(),
+              ),
               );
             },
           ),
