@@ -125,6 +125,51 @@ class Restaurant extends ChangeNotifier {
     ),
 
     // sides
+    Food(
+      name: "Garlic Bread",
+      description:
+      "This is the BEST  garlic bread you'll ever make. It has fresh herbs, tons of flavorful roasted garlic, and is perfectly toasted.",
+      imagePath: "lib/images/sides/garlic_bread_side.jpeg",
+      price: 130.20,
+      category: FoodCategory.Sides,
+      availableAddons: [],
+    ),
+    Food(
+      name: "Loaded Fries",
+      description:
+      "A big pile of crispy french fries smothered in melty cheese and bacon and topped with green onion and your fave toppings!",
+      imagePath: "lib/images/sides/loadedfries_side.jpg",
+      price: 130.20,
+      category: FoodCategory.Sides,
+      availableAddons: [],
+    ),
+    Food(
+      name: "Mac ann Cheese",
+      description:
+      "It uses a combination of cheeses, layered in the dish as well as melted into a rich and creamy cheese sauce, for the ultimate in cheesy deliciousness!  Perfect for a comforting dinner or as a holiday side dish!",
+      imagePath: "lib/images/sides/mac_side.jpeg",
+      price: 120.20,
+      category: FoodCategory.Sides,
+      availableAddons: [],
+    ),
+    Food(
+      name: "Crispy Onion Rings",
+      description:
+      "Sweet and tender on the inside, crispy and crunchy on the outside — just like the pros make!",
+      imagePath: "lib/images/sides/onion_rings_side.jpg",
+      price: 100.20,
+      category: FoodCategory.Sides,
+      availableAddons: [],
+    ),
+    Food(
+      name: "Sweeet Potatoes",
+      description:
+      "With streusel and a little hot honey kick, these are the perfect autumn side dish!",
+      imagePath: "lib/images/sides/sweet_potatoes_side.jpeg",
+      price: 150.20,
+      category: FoodCategory.Sides,
+      availableAddons: [],
+    ),
 
     //deserts
 
