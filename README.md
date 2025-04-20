@@ -1,6 +1,6 @@
-# first_app
+# Ahar Express (Food Delivery App)
 
-A new Flutter project.
+A Flutter project for Mobile Application and Design Course.
 
 ## Getting Started
 
