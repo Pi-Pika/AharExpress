@@ -6,9 +6,9 @@ A Flutter project for Mobile Application and Design Course.
 
 Ahar Express is a modern, cross-platform food ordering and delivery application built using **Flutter** and powered by **Firebase**. It provides a seamless user experience for browsing menus, placing orders with a demo payment system, and offers unique features like a built-in weather checker.
 
-| Live Demo | Technology | Backend | Deployment |
-| :---: | :---: | :---: | :---: |
-| [![Ahar Express Live Demo](https://img.shields.io/badge/Live%20Demo-Vercel-blue?style=for-the-badge)](https://ahar-express.vercel.app) | [![Flutter](https://img.shields.io/badge/Flutter-02569B?style=for-the-badge&logo=flutter&logoColor=white)](https://flutter.dev) | [![Firebase](https://img.shields.io/badge/Firebase-FFCA28?style=for-the-badge&logo=firebase&logoColor=black)](https://firebase.google.com) | [![Vercel](https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white)](https://vercel.com) |
+| Technology | Backend |
+| :---: | :---: |
+| [![Flutter](https://img.shields.io/badge/Flutter-02569B?style=for-the-badge&logo=flutter&logoColor=white)](https://flutter.dev) | [![Firebase](https://img.shields.io/badge/Firebase-FFCA28?style=for-the-badge&logo=firebase&logoColor=black)](https://firebase.google.com) |
 
 ***
 
@@ -31,7 +31,6 @@ The application is built using a modern, scalable architecture:
 * **Frontend Framework:** [Flutter](https://flutter.dev)
 * **Language:** [Dart](https://dart.dev)
 * **Backend & Database:** [Firebase](https://firebase.google.com) (Authentication, Firestore for data, Storage for receipts/images)
-* **Deployment:** [Vercel](https://vercel.com) (for web deployment)
 
 ***
 
