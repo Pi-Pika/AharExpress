@@ -52,3 +52,34 @@ To get Ahar Express running locally, follow these simple steps.
 ```bash
 git clone [https://github.com/Pi-Pika/AharExpress.git](https://github.com/Pi-Pika/AharExpress.git)
 cd AharExpress
+
+### Step 2: Configure Firebase
+
+1.  Create a new project in the [Firebase Console](https://console.firebase.google.com/).
+2.  Follow the instructions to add a **Flutter** app to your Firebase project.
+3.  Place your configuration files (`google-services.json` for Android and `GoogleService-Info.plist` for iOS/macOS/web) into the correct platform folders (`android/app/` and `ios/Runner/`).
+
+### Step 3: Install Dependencies
+
+Fetch all the required Dart and Flutter packages:
+
+```bash
+flutter pub get
+
+### Step 4: Run the Application
+
+You can run the app on any connected device or simulator/emulator:
+
+```bash
+flutter run
+
+🧑‍💻 Usage
+The payment process utilizes a demo card payment system. To complete an order and see the receipt stored in Firebase, users only need to input the necessary fields (card number, expiry, CVV) with any placeholder data. The application will process this as a successful transaction and securely log the receipt.
+
+🤝 Contributing
+Contributions are always welcome! If you have suggestions or want to report an issue, please feel free to open a Pull Request or a new Issue.
+
+📞 Contact
+Project Link: https://github.com/Pi-Pika/AharExpress
+
+Developer: @Pi-Pika
